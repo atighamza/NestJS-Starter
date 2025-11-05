@@ -1,11 +1,41 @@
-# 🚀 NestJS Starter Project
+#🚀 NestJS Starter Project
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A production-ready NestJS starter project for building scalable server-side applications with Prisma ORM, JWT authentication (Access & Refresh Tokens), and cookie-based session handling.
+Includes User CRUD, database setup via Docker, and structured module architecture.
 
+## 🧩 Features
+
+
+ **NestJS** — Modular and scalable architecture
+
+ **Prisma ORM** — Type-safe database access
+
+ **Authentication** — Access & Refresh Tokens (JWT)
+
+ **Secure Cookies** — Refresh token stored in HttpOnly cookies
+
+ **User Management** — Create, read, update, delete users
+
+ **Role-Based Access Control (RBAC)** — Secure routes with roles 
+
+ **Docker Compose** — Easy MySQL setup
+
+
+
+
+# ⚡️ Getting Started
 ## Project setup
 
+1-Clone the project
+```bash
+$ git clone https://github.com/atighamza/NestJS-Starter.git
+$ cd NestJS-Starter
+
+```
+
+2-Install dependencies
 ```bash
 $ npm install
 ```
