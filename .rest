@@ -1,0 +1,75 @@
+@baseURL = http://localhost:3000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc2MjMzMzI5OCwiZXhwIjoxNzYyNDE5Njk4fQ.bMMDXINv1pZ1YuKm98GjyAO0Oxc_KcRhb1P_KEJT9W8
+@refreshToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc2MjMzMjY5NiwiZXhwIjoxNzYyOTM3NDk2fQ.2kvjJ-w-KM4YDZri0_XQxzF_CTzgck2eO50_YtDwXac
+@contentType = application/json
+
+### get all users
+GET http://localhost:3000/users
+Authorization: Bearer {{token}}
+
+
+### get user by ID
+GET http://localhost:3000/users/6
+Authorization: Bearer {{token}}
+
+
+### get profile (/me)
+GET http://localhost:3000/auth/me
+Authorization: Bearer {{token}}
+
+### delete user 
+DELETE  http://localhost:3000/users/7
+Authorization: Bearer {{token}}
+
+
+### update user 
+PATCH  {{baseURL}}/users/6
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+{
+"firstName": "test",
+"lastName":"update" 
+
+}
+
+
+
+
+### POST Request
+
+POST {{baseURL}}/auth/register
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+{
+"firstName": "hamza",
+"lastName":"atig" ,
+"email": "test_del@gmail.com",
+"password":"123" ,
+"phone":"112233"
+}
+
+
+### POST Request
+
+POST {{baseURL}}/auth/login
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+{
+"email": "test@gmail.com",
+"password":"123" 
+}
+
+
+### POST Request
+
+GET {{baseURL}}/auth/refresh
+Authorization: Bearer {{token}}
+Cookie: 
+
+
+
+
+
