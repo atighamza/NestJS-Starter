@@ -60,17 +60,17 @@ $ npm run start:dev
 
 ## 🔑 Authentication Flow
 
-**1-Signup / Login**\
+**1-Signup / Login**
 
-→ User gets an access token (JWT) in response\
+→ User gets an access token (JWT) in response
 
 → A refresh token is set in an HttpOnly cookie
 
-**2-Access Token Expired?**\
+**2-Access Token Expired?**
 
-→ Frontend sends request to /auth/refresh\
+→ Frontend sends request to /auth/refresh
 
-→ Backend verifies the refresh token from cookie\
+→ Backend verifies the refresh token from cookie
 
 → Returns new access token
 
